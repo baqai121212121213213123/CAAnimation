@@ -6,6 +6,8 @@
 //  Copyright © 2019 mackbook. All rights reserved.
 //
 
+// one of logical concepts just to enhance the existing approach.
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -16,5 +18,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func didtappedTransation(_ sender: UIButton) {
+        
+        
+        if self.navigationController != nil {
+            
+            let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewControllerId") as! SecondViewController
+            self.navigationController?.pushViewController(secondVC, animated: true)
+            
+        }
+        
+    }
 }
 
